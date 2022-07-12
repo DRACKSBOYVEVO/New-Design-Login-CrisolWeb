@@ -2,3 +2,29 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #fff; 
 }
+
+.img-responsive {
+    width: 300px;
+    height: 100px;
+    margin: 5px -23px;
+}
+
+.form-control{
+    width: 49%;
+}
+
+.btn-primary{
+    position: absolute;
+    width: 47%;
+    height: 49px;
+    background: #004DA9;
+    border-radius: 4px;
+}
+
+.btn-primary:hover{
+    background: #0D478C;
+}
+
+label {
+    font-size: 15px;
+}
