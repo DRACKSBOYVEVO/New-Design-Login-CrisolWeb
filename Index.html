@@ -1,3 +1,10 @@
+<!-- 
+@model Crisol.Presentation.WebClient.Models.LoginModel
+@{
+    Layout = null;
+} 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,10 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    <!-- 
+        Bootstrap 5.1.3
+        Ruta visual: href="~/Content/bootstrap.min.css"
+    -->
     <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
      <!-- Style -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -18,36 +28,65 @@
     <!-- Container start -->
     <div class="d-lg-flex half">
         <!-- Add image <img class="bg order-1 order-md-2" src="./Assets/Images/bg_1.jpg">-->
-        <!-- Video page -->
+        <!-- Video start-->
             <video src="Assets/Video/intro login crisolweb.mp4" autoplay muted loop></video>
-        <!-- Video page -->
+        <!-- Video stop-->
         <div class="contents order-2 order-md-1">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-7">
-                        <img class="img-responsive" src="Assets/Images/Logo.png">
+                        <img class="img-responsive" src="Assets/Images/Logo.png"><!-- src="~/Content/images/LogoCrisol.png" -->
                         <h2>Bienvenido de nuevo</h2>
                         <p class="mb-4 text-muted">Por favor ingresa tus datos para acceder al sistema.</p>
 
+                        <!-- @using (Html.BeginForm(new { @class = "fromPrincipal" })){ -->
                         <form method="post" action="#">
                             <div class="form-group first"> <!--col-12 col-m-6 col-lg-8 -->
                                 <label for="Username" class="form-label">Usuario</label>
-                                <input class="form-control input-lg" type="text" placeholder="Usuario de crisol" id="Username" required>
+                                <i class="fa-thin fa-user"></i>
+                                <input class="form-control input-lg" type="text" placeholder="Usuario de crisol" id="usuario" required>
+                                <!-- @Html.TextBoxFor(m => m.Usuario, new { id = "usuario", Class = "form-control input-lg input_user", placeholder = "Usuario de crisol" }) -->
                             </div>
                             <div class="form-group last mb-3">
                                 <label class="form-label" for="Password">Contraseña</label>
-                                <input class="form-control input-lg" type="password" placeholder="Ingresa tu contraseña" id="Password" required>
+                                <input class="form-control input-lg" type="password" placeholder="Ingresa tu contraseña" id="contraseña" required>
+                                <!-- @Html.PasswordFor(m => m.Contraseña, new { id = "contraseña", Class = "form-control input-lg input_pass", placeholder = "Ingresa tu contraseña"}) -->
                             </div>
+                            <!-- @Html.ValidationSummary(true, "", new { Class = "alert alert-danger", Role = "alert" }) -->
                             <input class="btn btn-primary input-lg" type="submit" value="Ingresar">
                         </form>
+                        <!-- } -->
                     </div>
                     <div class="col-md-7">
-                        <footer class="blockquote-footer"><a href="https://www.clickinsoft.net/terminosycondicionescrisolweb" target="_blank">Copyright © 2022 Crisol Web</a> | Todos los derechos reservados</footer>
+                        <footer class="blockquote-footer"><a href="https://www.clickinsoft.net/terminosycondicionescrisolweb" target="_blank">Copyright &copy; 2022 Crisol Web</a> | Todos los derechos reservados</footer>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Container stop -->
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/Views/Seguridad/SoporteAutomatizado.js" crossorigin="*"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/575706119635a8fc561dc484/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+
+        Tawk_API.onPrechatSubmit = function (data) {
+            debugger;
+            soporteAutomatizado.get_intent(data[3].answer, Tawk_API);
+        };
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
