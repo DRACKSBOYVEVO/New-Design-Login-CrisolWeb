@@ -36,6 +36,9 @@ label {
 
 .form-control{
     width: 100%;
+    height: 75px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px; 
 }
 
 p {
@@ -67,6 +70,14 @@ a {
 
 h2 {
     font-size: 20px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.row {
+    margin-right: -27px;
+    margin-left: -80px;
 }
 
 .half, .half .container > .row {
@@ -86,6 +97,8 @@ h2 {
 
 .half .contents, .half .bg {
     width: 50%;
+    margin-top: -13px;
+    margin-left: 9px;
 }
 
 @media (max-width: 1199.98px) {
@@ -95,12 +108,13 @@ h2 {
 }
 
 .half .contents .form-control, .half .bg .form-control {
-    border: none;
+    border: 0.5px solid #e4e4e4;
+    /* border: none; */
     -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 4%);
     border-radius: 4px;
-    height: 54px;
-    background: rgb(227, 227, 227);
+    height: 49px;
+    background: rgb(246, 246, 246);
 }
 
     .half .contents .form-control:active, .half .contents .form-control:focus, .half .bg .form-control:active, .half .bg .form-control:focus {
@@ -118,6 +132,8 @@ h2 {
     height: 54px;
     padding-left: 30px;
     padding-right: 30px;
+    font-weight: 500;
+    margin-top: 10px;
 }
 
 .half .forgot-pass {
