@@ -12,15 +12,7 @@ body {
     width: 313px;
     height: 103px;
     margin: 19px -23px;
-    margin-top: -62px;
-}
-
-.video-background {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    margin-top: 27px;
 }
 
 .form-control{
@@ -148,4 +140,13 @@ h2 {
     position: absolute;
     z-index: -1;
     opacity: 0;
+}
+
+.blockquote-footer{
+    margin-top: -2rem;
+}
+
+.blockquote-footer a{
+    text-decoration: none;
+    color: #004DA9;
 }
