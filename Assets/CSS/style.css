@@ -3,8 +3,9 @@ body {
     background-color: #fff;
 }
 
-label {
+.form-label {
     font-size: 15px;
+    margin: 17px 0px 8px;
 }
 
 .img-responsive {
@@ -41,16 +42,6 @@ h2 {
 label{
     font-weight: 600;
 }
-
-a {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-}
-
-    a:hover {
-        text-decoration: none !important;
-    }
 
 .content {
     padding: 7rem 0;
@@ -118,7 +109,7 @@ h2 {
 
 .half .btn {
     position: absolute;
-    width: 93%;
+    width: 31%;
     height: 45px;
     padding-left: 30px;
     padding-right: 30px;
