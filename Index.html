@@ -6,7 +6,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
      <!-- Style -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
     <link rel="shortcut icon" href="Assets/Images/favicon.ico" type="image/x-icon">
-    <title>Crisol web - Software de producción</title>
+    <title>Crisol web - Iniciar sesión | Software de producción</title>
 </head>
 <body>
     <!-- Container start -->
@@ -49,13 +49,13 @@
                             </div>
                             <div class="form-group last mb-3">
                                 <label class="form-label" for="Password">Contraseña</label>
-                                <input class="form-control input-lg" type="password" placeholder="Ingresa tu contraseña" id="contraseña" required>
+                                <input class="form-control input-lg" type="password" id="contraseña" placeholder="Ingresa tu contraseña"  required>
                                 <!-- @Html.PasswordFor(m => m.Contraseña, new { id = "contraseña", Class = "form-control input-lg input_pass", placeholder = "Ingresa tu contraseña"}) -->
                             </div>
                             <!-- @Html.ValidationSummary(true, "", new { Class = "alert alert-danger", Role = "alert" }) -->
-                            <input class="btn btn-primary input-lg" type="submit" value="Ingresar">
+                            <input class="btn btn-custom btn-outline-info btn-lg" type="submit" value="Ingresar">
                         </form>
-                        <!-- } -->
+                    <!--} -->
                     </div>
                     <div class="col-md-7">
                         <footer class="blockquote-footer"><a href="https://www.clickinsoft.net/terminosycondicionescrisolweb" target="_blank">Copyright &copy; 2022 Crisol Web</a> | Todos los derechos reservados</footer>
@@ -66,27 +66,24 @@
     </div>
     <!-- Container stop -->
 
+    
+
     <!-- Scripts -->
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
-    <script src="~/Scripts/Views/Seguridad/SoporteAutomatizado.js" crossorigin="*"></script>
+    <!-- <script src="~/Scripts/Views/Seguridad/SoporteAutomatizado.js" crossorigin="*"></script> -->
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/575706119635a8fc561dc484/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/62cf0f5bb0d10b6f3e7c3044/1g7sd7vg1';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
         })();
-
-        Tawk_API.onPrechatSubmit = function (data) {
-            debugger;
-            soporteAutomatizado.get_intent(data[3].answer, Tawk_API);
-        };
-    </script>
+        </script>
     <!--End of Tawk.to Script-->
 </body>
 </html>
